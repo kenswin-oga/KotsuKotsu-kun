@@ -20,5 +20,6 @@ destroy:
 	docker compose down --rmi all --volumes
 ps:
 	docker compose ps
+.PHONY: php
 php:
 	docker compose exec php bash
