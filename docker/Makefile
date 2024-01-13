@@ -5,7 +5,7 @@ build:
 down:
 	docker compose down
 create-project:
-	docker compose exec app composer create-project --prefer-dist laravel/laeavel .
+	docker compose exec app composer create-project --prefer-dist "laravel/laravel=" .
 install:
 	docker-compose exec app composer install
 	docker-compose exec app cp .env.example .env
