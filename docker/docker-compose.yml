@@ -51,7 +51,8 @@ services:
 
   # phpmyadmin
   phpmyadmin:
-    image: phpmyadmin/phpmyadmin:latest
+    build:
+      dockerfile: "./phpmyadmin/Dockerfile"
     container_name: "phpmyadmin_test"
     environment:
       - PMA_ARBITRARY=1 # サーバ設定：サーバーをローカル以外も指定
