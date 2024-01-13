@@ -5,11 +5,11 @@ build:
 down:
 	docker compose down
 create-project:
-	docker compose exec app composer create-project --prefer-dist "laravel/laravel=" .
+	docker compose exec php composer create-project --prefer-dist "laravel/laravel=" .
 install:
-	docker-compose exec app composer install
-	docker-compose exec app cp .env.example .env
-	docker-compose exec app php artisan key:generate
+	docker-compose exec php composer install
+	docker-compose exec php cp .env.example .env
+	docker-compose exec php php artisan key:generate
 stop:
 	docker compose stop
 reboot:
@@ -20,5 +20,5 @@ destroy:
 	docker compose down --rmi all --volumes
 ps:
 	docker compose ps
-app:
-	docker compose exec app bash
+php:
+	docker compose exec php bash
