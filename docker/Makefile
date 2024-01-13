@@ -7,9 +7,9 @@ down:
 create-project:
 	docker compose exec php composer create-project --prefer-dist "laravel/laravel=" .
 install:
-	docker-compose exec php composer install
-	docker-compose exec php cp .env.example .env
-	docker-compose exec php php artisan key:generate
+	docker compose exec php composer install
+	docker compose exec php cp .env.example .env
+	docker compose exec php php artisan key:generate
 stop:
 	docker compose stop
 reboot:
