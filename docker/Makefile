@@ -10,8 +10,8 @@ install:
 	docker compose exec php composer install
 	docker compose exec php cp .env.example .env
 	docker compose exec php php artisan key:generate
-	chmod -R 777 ../src/storage/
-	chmod -R 777 ./phpmyadmin/sessions/
+	sudo chmod -R 777 ../src/storage/
+	sudo chmod -R 777 ./phpmyadmin/sessions/
 stop:
 	docker compose stop
 reboot:
