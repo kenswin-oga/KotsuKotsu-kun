@@ -76,4 +76,4 @@ services:
       dockerfile: "./npm/Dockerfile"
     container_name: "npm"
     volumes:
-      - "./src/:/workspace"
+      - "./src:/workspace"

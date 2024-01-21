@@ -1,2 +1,4 @@
-/docker/db/data/
-/docker/phpmyadmin/sessions
+/db/data/
+/db/dump/
+/phpmyadmin/sessions/
+/node_modules/
