@@ -13,6 +13,8 @@ install:
 	sudo chmod -R 777 ./src/storage/
 	sudo chmod -R 777 ./phpmyadmin/sessions/
 	docker compose run --rm -it npm npm ci
+dev:
+    docker compose run --rm npm npm run build
 stop:
 	docker compose stop
 reboot:
