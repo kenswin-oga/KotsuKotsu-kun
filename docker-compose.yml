@@ -7,45 +7,31 @@ services:
   web:
     # コンテナ名
     container_name: "web"
-    # コンテナ作成に使用するDockerfileのパス
     build:
       dockerfile: "./web/Dockerfile"
-    # ホストとコンテナのポート番号の対応付け
-    # <ホスト側のポート>:<コンテナ側のポート>
     ports:
       - "8080:80"
-    # volumeをバインド
-    # <ホスト側のパス>:<コンテナ側のパス>
-    # srcは後ほど作成するlaravelプロジェクト
     volumes:
       - "./src:/var/www/html"
   # PHPコンテナ
   php:
-    # コンテナ名
     container_name: "php"
-    # コンテナ作成に使用するDockerfileのパス
     build:
       dockerfile: "./php/Dockerfile"
-    # volumeをバインド
     volumes:
       - "./src:/var/www/html"
   # DBコンテナ
   db:
-    # コンテナ名
     container_name: "db"
-    # コンテナ作成に使用するDockerfileのパス
     build:
       dockerfile: "./db/Dockerfile"
-    # ホストとコンテナのポート番号の対応付け
     ports:
       - "3306:3306"
-    # 環境変数の指定
     environment:
       - "MYSQL_ROOT_PASSWORD=password"
       - "MYSQL_DATABASE=database"
       - "MYSQL_USER=laravel"
       - "MYSQL_PASSWORD=password"
-    # volumeをバインド
     volumes:
       - "./db/data:/var/lib/mysql"
 
@@ -55,17 +41,14 @@ services:
       dockerfile: "./phpmyadmin/Dockerfile"
     container_name: "phpmyadmin"
     environment:
-      - PMA_ARBITRARY=1 # サーバ設定：サーバーをローカル以外も指定
-      - PMA_HOST=db # ホスト設定：dbを指定
-      - PMA_USER=laravel # 初期ユーザー設定：adminを指定
-      - PMA_PASSWORD=password # 初期PW設定：secretを指定
-    # db（サービス名）とのリンクを設定する
+      - PMA_ARBITRARY=1
+      - PMA_HOST=db
+      - PMA_USER=laravel
+      - PMA_PASSWORD=password
     links:
       - db
-    # ポートフォワードの指定（ホスト側ポート：コンテナ側ポート）
     ports:
-      - 8888:80
-    # ボリュームを設定する（ホスト側ディレクトリ:コンテナ側ボリュームの場所）
+      - "8888:80"
     volumes:
       - ./phpmyadmin/sessions:/sessions
   

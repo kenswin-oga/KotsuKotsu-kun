@@ -4,11 +4,16 @@ import laravel from 'laravel-vite-plugin';
 export default defineConfig({
     plugins: [
         laravel({
-            input: ['src/resources/sass/top.scss', 'src/resources/js/app.js'],
+            input: ['resources/sass/top.scss',
+                    'resources/css/app.css'
+                ],
             refresh: true,
         }),
     ],
     server: {
         host: true,
-    },
+        hmr: {
+            host: 'localhost',
+        },
+    }
 });

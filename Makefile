@@ -12,6 +12,7 @@ install:
 	docker compose exec php php artisan key:generate
 	sudo chmod -R 777 ./src/storage/
 	sudo chmod -R 777 ./phpmyadmin/sessions/
+	docker compose run --rm -it npm npm ci
 stop:
 	docker compose stop
 reboot:
