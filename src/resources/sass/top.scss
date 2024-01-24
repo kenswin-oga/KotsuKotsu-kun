@@ -1,3 +1,119 @@
-.test {
-    color: white;
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Wendy+One&display=swap');
+
+$main-color: #4F3318;
+
+.page {
+    background-color: #FEFAF2;
+    color: $main-color;
+}
+
+.header-container {
+  margin: 0 73px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .app-title {
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: $main-color;
+    text-align: left;
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 40px;
+    padding-left: 54px;
   }
+
+  .menu-group {
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center; 
+    text-align: right;
+    
+    .menu-item {
+      display: inline-block;
+      margin-right: 54px;
+      font-family: 'Inter', sans-serif;
+  
+      a {
+        color: $main-color;
+        text-decoration: none;
+      }
+    
+      a.button {
+        color: white;
+        border-radius: 10px;
+        display: block;
+        width: 126px;
+        padding: 14px;
+        box-sizing: border-box;
+        background: $main-color;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.top-content {
+  margin: 50px 470px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .title, .sub-title {
+    display: flex;
+    align-items: center;
+  }
+
+  .sub-title {
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: $main-color;
+    font-size: 40px;
+    font-family: 'Wendy One', sans-serif;
+    justify-content: center;
+  }
+
+  .title {
+    -webkit-text-stroke-width: 7px;
+    -webkit-text-stroke-color: $main-color;
+    font-size: 100px;
+    font-family: 'Yusei Magic', sans-serif;
+    justify-content: center;
+  }
+
+  .app-icon {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin-left: 68px;
+    height: auto;
+    
+    img {
+      width: 50%;
+      height: auto;
+    }
+    
+    .app-icon-img2 {
+      margin-left: -70px;
+    }
+  }
+  
+  a.button {
+    margin-top: 50px;
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    vertical-align: middle;
+    text-decoration: none;
+    border-radius: 10px;
+    width: 297px;
+    height: 55px;
+    padding: 8px 70px;
+    box-sizing: border-box;
+    background: $main-color;
+    text-align: center;
+  }
+}
