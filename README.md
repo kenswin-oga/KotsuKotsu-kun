@@ -5,6 +5,9 @@ $ make reboot
 
 # Composer依存関係のインストールやアプリケーションの初期化
 $ make install
+
+# フロントのビルド
+$ make dev
 ```
 
 # 画面遷移図
