@@ -5,6 +5,7 @@ export default defineConfig({
     plugins: [
         laravel({
             input: ['resources/sass/top.scss',
+                    'resources/sass/signin.scss',
                     'resources/css/app.css'
                 ],
             refresh: true,

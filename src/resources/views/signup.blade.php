@@ -8,17 +8,17 @@
     </head>
     <body class="page">
         <div class="header-container">
-            <a href="/" class="app-title">
+            <a href="#" class="app-title">
                 レシぽん！
             </a>
             <ul class="menu-group">
                 <li class="menu-item">
-                    <a href="/signin">
+                    <a href="#">
                         ログイン
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="/signup" class="button">
+                    <a href="#" class="button">
                         登録
                     </a>
                 </li>
@@ -34,7 +34,7 @@
             <div class="app-icon">
                 <img src="{{ asset("images/recipon.png") }}" class="app-icon-img1">
             </div>
-            <a href="signup" class="button">
+            <a href="#" class="button">
                 使ってみる
             </a>
         </div>
