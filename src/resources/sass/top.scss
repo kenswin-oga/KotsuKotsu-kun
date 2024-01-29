@@ -22,6 +22,8 @@ $main-color: #4F3318;
     font-family: 'Yusei Magic', sans-serif;
     font-size: 40px;
     padding-left: 54px;
+    color: $main-color;
+    text-decoration: none;
   }
 
   .menu-group {
@@ -70,33 +72,26 @@ $main-color: #4F3318;
   .sub-title {
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: $main-color;
-    font-size: 40px;
+    font-size: 30px;
     font-family: 'Wendy One', sans-serif;
     justify-content: center;
   }
 
   .title {
-    -webkit-text-stroke-width: 7px;
+    -webkit-text-stroke-width: 3px;
     -webkit-text-stroke-color: $main-color;
-    font-size: 100px;
+    font-size: 90px;
     font-family: 'Yusei Magic', sans-serif;
     justify-content: center;
   }
 
   .app-icon {
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    margin-left: 68px;
-    height: auto;
-    
+    height: 300px;
+    width: 380px;
+
     img {
-      width: 50%;
-      height: auto;
-    }
-    
-    .app-icon-img2 {
-      margin-left: -70px;
+      height: 100%;
+      width: 100%;
     }
   }
   

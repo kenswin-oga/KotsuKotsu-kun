@@ -8,7 +8,9 @@
     </head>
     <body class="page">
         <div class="header-container">
-            <div class="app-title">コツコツくん</div>
+            <a href="#" class="app-title">
+                レシぽん！
+            </a>
             <ul class="menu-group">
                 <li class="menu-item">
                     <a href="#">
@@ -24,14 +26,13 @@
         </div>
         <div class="top-content">
             <div class="sub-title">
-                日々の継続のお供
+                日々の自炊のお供
             </div>
             <div class="title">
-                コツコツくん
+                レシぽん！
             </div>
             <div class="app-icon">
-                <img src="{{ asset("images/study_human.png") }}" class="app-icon-img1">
-                <img src="{{ asset("images/flag_human.png") }}" class="app-icon-img2">
+                <img src="{{ asset("images/recipon.png") }}" class="app-icon-img1">
             </div>
             <a href="#" class="button">
                 使ってみる
