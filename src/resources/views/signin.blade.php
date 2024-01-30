@@ -8,7 +8,7 @@
     </head>
     <body class="page">
         <div class="header-container">
-            <a href="#" class="app-title">
+            <a href="/" class="app-title">
                 レシぽん！
             </a>
         </div>

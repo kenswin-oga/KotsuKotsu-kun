@@ -1,42 +1,34 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
-        @vite(['resources/sass/top.scss'])
+        @vite(['resources/sass/signin.scss'])
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Laravel</title>
     </head>
     <body class="page">
         <div class="header-container">
-            <a href="#" class="app-title">
+            <a href="/" class="app-title">
                 レシぽん！
             </a>
-            <ul class="menu-group">
-                <li class="menu-item">
-                    <a href="#">
-                        ログイン
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="#" class="button">
-                        登録
-                    </a>
-                </li>
-            </ul>
         </div>
         <div class="top-content">
             <div class="sub-title">
-                日々の自炊のお供
+                登録
             </div>
-            <div class="title">
-                レシぽん！
-            </div>
-            <div class="app-icon">
-                <img src="{{ asset("images/recipon.png") }}" class="app-icon-img1">
-            </div>
-            <a href="#" class="button">
-                使ってみる
-            </a>
+            <form class="login-form">
+                <div class="form-group">
+                    <label for="username">ユーザー名</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">パスワード</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+            </form>
+            <button type="submit" class="button">
+                はじめる
+            </button>
         </div>
     </body>
 </html>
