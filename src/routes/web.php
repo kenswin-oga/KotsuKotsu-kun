@@ -17,14 +17,6 @@ Route::get('/', function () {
     return view('top');
 });
 
-Route::get('/signin', function () {
-    return view('signin');
-});
-
-Route::get('/signup', function () {
-    return view('signup');
-});
-
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
