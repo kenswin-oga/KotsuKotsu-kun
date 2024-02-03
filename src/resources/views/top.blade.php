@@ -13,7 +13,7 @@
             </a>
             <ul class="menu-group">
                 <li class="menu-item">
-                    <a href="/home">
+                    <a href="/login">
                         ログイン
                     </a>
                 </li>
@@ -34,7 +34,7 @@
             <div class="app-icon">
                 <img src="{{ asset("images/recipon.png") }}" class="app-icon-img1">
             </div>
-            <a href="home" class="button">
+            <a href="login" class="button">
                 使ってみる
             </a>
         </div>

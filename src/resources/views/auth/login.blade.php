@@ -36,10 +36,6 @@
                     </span>
                 @enderror
             </div>
-            <div class="form-group">
-                <label for="password-confirm">パスワード確認</label>
-                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-            </div>
             <button type="submit" class="button">
                 はじめる
             </button>
