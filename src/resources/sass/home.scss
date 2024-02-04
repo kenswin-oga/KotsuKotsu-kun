@@ -3,125 +3,65 @@
 @import url('https://fonts.googleapis.com/css2?family=Wendy+One&display=swap');
 
 $main-color: #4F3318;
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+body {
+  margin: 0;
+  padding-top: 8px;
+}
+
+.page {
+    background-color: #FEFAF2;
+    color: $main-color;
+}
+
+.header-container {
+  margin: 0 73px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .app-title {
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: $main-color;
+    text-align: left;
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 40px;
+    padding-left: 54px;
+    color: $main-color;
+    text-decoration: none;
   }
-  
-  // コンテナ
-  .container {
-    max-width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 1rem;
-    padding-left: 1rem;
-  }
-  
-  // フレックスボックス
-  .flex {
+
+  .menu-group {
+    font-size: 16px;
+    font-weight: bold;
     display: flex;
+    align-items: center; 
+    text-align: right;
+    
+    .menu-item {
+      display: inline-block;
+      margin-right: 54px;
+      font-family: 'Inter', sans-serif;
+  
+      a {
+        color: $main-color;
+        text-decoration: none;
+      }
+    
+      a.button {
+        color: white;
+        border-radius: 10px;
+        display: block;
+        width: 126px;
+        padding: 14px;
+        box-sizing: border-box;
+        background: $main-color;
+        text-align: center;
+      }
+    }
   }
-  
-  // フレックス方向（縦）
-  .flex-col {
-    flex-direction: column;
-  }
-  
-  // アイテムの中央揃え
-  .items-center {
-    align-items: center;
-  }
-  
-  // ジャストファイ中央揃え
-  .justify-center {
-    justify-content: center;
-  }
-  
-  // テキストスタイル
-  .text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-    font-weight: 700;
-  }
-  
-  .font-bold {
-    font-weight: 700;
-  }
-  
-  .text-gray-600 {
-    color: #4b5563;
-  }
-  
-  // その他スタイル
-  .mb-4 {
-    margin-bottom: 1rem;
-  }
-  
-  .mb-6 {
-    margin-bottom: 1.5rem;
-  }
-  
-  // ボーダー
-  .border {
-    border-width: 1px;
-    border-style: solid;
-  }
-  
-  // 角丸
-  .rounded-lg {
-    border-radius: 0.5rem;
-  }
-  
-  // オーバーフロー制御
-  .overflow-hidden {
-    overflow: hidden;
-  }
-  
-  // パディング
-  .p-4 {
-    padding: 1rem;
-  }
-  
-  // 画像スタイル
-  .object-cover {
-    object-fit: cover;
-  }
-  
-  // ボタンスタイル
-  .whitespace-nowrap {
-    white-space: nowrap;
-  }
-  
-  // ボタンのホバーエフェクト
-  .hover\:bg-primary\/90:hover {
-    background-color: rgba(59, 130, 246, 0.9);
-  }
-  
-  .hover\:text-accent-foreground:hover {
-    color: #2563eb;
-  }
-  
-  // グリッドスタイル
-  .grid {
-    display: grid;
-  }
-  
-  .grid-cols-1 {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-  }
-  
-  .grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-  
-  .grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-  
-  .gap-6 {
-    gap: 1.5rem;
-  }
-  
-  // その他のスタイルは必要に応じて追加
-  
+}
+
+.custom-brown-bg {
+  background-color: #4F3318; /* カスタムの茶色に変更 */
+}

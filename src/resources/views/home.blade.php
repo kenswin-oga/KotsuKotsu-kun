@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
-        @vite(['resources/sass/top.scss'])
+        @vite(['resources/sass/home.scss'])
         <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
@@ -40,7 +40,7 @@
                     <div class="p-4">
                         <h2 class="font-bold text-lg mb-2">{{ $recipeData['result'][0]['recipeTitle'] }}</h2>
                         <p class="text-gray-600">{{ $recipeData['result'][0]['recipeDescription'] }}</p>
-                        <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 mt-4">View Recipe</button>
+                        <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input custom-brown-bg hover:bg-accent text-white h-10 px-4 py-2 mt-4">レシピをみる</button>
                     </div>
                 </div>
                 <div class="border rounded-lg overflow-hidden">
@@ -48,7 +48,7 @@
                     <div class="p-4">
                         <h2 class="font-bold text-lg mb-2">{{ $recipeData['result'][1]['recipeTitle'] }}</h2>
                         <p class="text-gray-600">{{ $recipeData['result'][1]['recipeDescription'] }}</p>
-                        <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 mt-4">View Recipe</button>
+                        <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input custom-brown-bg hover:bg-brown-700 text-white h-10 px-4 py-2 mt-4">レシピをみる</button>
                     </div>
                 </div>
                 <div class="border rounded-lg overflow-hidden">
@@ -56,7 +56,7 @@
                     <div class="p-4">
                         <h2 class="font-bold text-lg mb-2">{{ $recipeData['result'][2]['recipeTitle'] }}</h2>
                         <p class="text-gray-600">{{ $recipeData['result'][2]['recipeDescription'] }}</p>
-                        <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 mt-4">View Recipe</button>
+                        <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input custom-brown-bg hover:bg-accent text-white h-10 px-4 py-2 mt-4">レシピをみる</button>
                     </div>
                 </div>
             </div>
