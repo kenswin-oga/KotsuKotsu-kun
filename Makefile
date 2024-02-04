@@ -13,6 +13,10 @@ install:
 	sudo chmod -R 777 ./src/storage/
 	sudo chmod -R 777 ./phpmyadmin/sessions/
 	docker compose run --rm -it npm npm ci
+migrate:
+	docker compose exec php php artisan migrate
+seeder:
+	docker compose exec php php artisan db:seed --class=DatabaseSeeder
 dev:
 	docker compose run --rm npm npm run build
 stop:
