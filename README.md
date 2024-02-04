@@ -8,6 +8,12 @@ $ make install
 
 # フロントのビルド
 $ make dev
+
+# テーブル作成
+$ make migrate
+
+# データ挿入
+$ make seeder
 ```
 
 # 画面遷移図
