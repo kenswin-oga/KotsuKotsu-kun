@@ -36,26 +36,29 @@
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
                 <div class="border rounded-lg overflow-hidden">
-                    <img src="{{ $recipeDataArray[0]['result'][0]['foodImageUrl'] }}" alt="Recipe 1" class="w-full h-54 object-cover" width="200" height="200" style="aspect-ratio: 200 / 200; object-fit: cover;">
+                    <img src="{{ $recipeList['result'][0]['foodImageUrl'] }}" alt="Recipe 1" class="w-full h-54 object-cover" width="200" height="200" style="aspect-ratio: 200 / 200; object-fit: cover;">
                     <div class="p-4">
-                        <h2 class="font-bold text-lg mb-2">{{ $categoryNames[0] }}</h2>
+                        <h2 class="font-bold text-lg mb-2">{{ $recipeList['result'][0]['recipeTitle'] }}</h2>
+                        <p class="text-gray-600">{{ $recipeList['result'][0]['recipeDescription'] }}</p>
                         <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input custom-brown-bg hover:bg-accent text-white h-10 px-4 py-2 mt-4">
-                            <a href="{{ route('recipe-list', ['id' => 0]) }}">レシピ一覧</a>
+                            レシピをみる
                         </button>
                     </div>
                 </div>
                 <div class="border rounded-lg overflow-hidden">
-                    <img src="{{ $recipeDataArray[1]['result'][0]['foodImageUrl'] }}" alt="Recipe 2" class="w-full h-54 object-cover" width="200" height="200" style="aspect-ratio: 200 / 200; object-fit: cover;">
+                    <img src="{{ $recipeList['result'][1]['foodImageUrl'] }}" alt="Recipe 2" class="w-full h-54 object-cover" width="200" height="200" style="aspect-ratio: 200 / 200; object-fit: cover;">
                     <div class="p-4">
-                        <h2 class="font-bold text-lg mb-2">{{ $categoryNames[1] }}</h2>
-                        <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input custom-brown-bg hover:bg-brown-700 text-white h-10 px-4 py-2 mt-4">レシピ一覧</button>
+                        <h2 class="font-bold text-lg mb-2">{{ $recipeList['result'][1]['recipeTitle'] }}</h2>
+                        <p class="text-gray-600">{{ $recipeList['result'][1]['recipeDescription'] }}</p>
+                        <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input custom-brown-bg hover:bg-brown-700 text-white h-10 px-4 py-2 mt-4">レシピをみる</button>
                     </div>
                 </div>
                 <div class="border rounded-lg overflow-hidden">
-                    <img src="{{ $recipeDataArray[2]['result'][0]['foodImageUrl'] }}" alt="Recipe 3" class="w-full h-54 object-cover" width="200" height="200" style="aspect-ratio: 200 / 200; object-fit: cover;">
+                    <img src="{{ $recipeList['result'][2]['foodImageUrl'] }}" alt="Recipe 3" class="w-full h-54 object-cover" width="200" height="200" style="aspect-ratio: 200 / 200; object-fit: cover;">
                     <div class="p-4">
-                        <h2 class="font-bold text-lg mb-2">{{ $categoryNames[2] }}</h2>
-                        <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input custom-brown-bg hover:bg-accent text-white h-10 px-4 py-2 mt-4">レシピ一覧</button>
+                        <h2 class="font-bold text-lg mb-2">{{ $recipeList['result'][2]['recipeTitle'] }}</h2>
+                        <p class="text-gray-600">{{ $recipeList['result'][2]['recipeDescription'] }}</p>
+                        <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input custom-brown-bg hover:bg-accent text-white h-10 px-4 py-2 mt-4">レシピをみる</button>
                     </div>
                 </div>
             </div>

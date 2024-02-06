@@ -27,17 +27,22 @@ class HomeController extends Controller
     public function index()
     {
         $recipeDataArray = [];
+        $categoryNames = [];
 
         // レシピデータを3つ取得
         for ($i = 0; $i < 3; $i++) {
-            $recipeDataArray[] = $this->getRandomRecipeData();
+            $category = $this->getRandomCategory();
+            $recipeDataArray[] = $this->getRecipeDataByCategory($category);
+            $categoryNames[] = $category->categoryName;
             Sleep::sleep(1);
         }
         // dd($recipeDataArray);
+        session()->put('recipeCategory', $recipeDataArray);
 
-        return view('home', ['recipeDataArray' => $recipeDataArray]);
+        return view('home', ['recipeDataArray' => $recipeDataArray, 'categoryNames' => $categoryNames]);
     }
-    private function getRandomRecipeData()
+
+    private function getRandomCategory()
     {
         $todayMenuList[] = [30, 31, 32, 33, 14, 15, 16];
         // ランダムに数字を選択
@@ -45,8 +50,12 @@ class HomeController extends Controller
 
         // categoriesテーブルからランダムなレコードを取得
         $category = Category::where('category1', $randomNumber)->inRandomOrder()->first();
+        return $category;
+    }
 
-        // 取得したレコードのcategoryIdカラムの値を取得
+    private function getRecipeDataByCategory($category)
+    {
+        // レコードのcategoryIdカラムの値を取得
         if ($category) {
             $categoryId = $category->categoryId;
         }
@@ -64,5 +73,10 @@ class HomeController extends Controller
 
         // レスポンスから必要なデータを取得
         return $response->json();
+    }
+
+    private function getCategoryNameByCategory($id) {
+        $categoryName = Category::where('categoryId', $id)->first();
+        return $categoryName;
     }
 }
