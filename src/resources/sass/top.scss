@@ -2,67 +2,76 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Wendy+One&display=swap');
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 $main-color: #4F3318;
 
-body {
-  margin: 0;
-  padding-top: 8px;
-}
+// body {
+//   margin: 0;
+//   padding-top: 8px;
+// }
 
-.page {
-    background-color: #FEFAF2;
-    color: $main-color;
-}
+// .page {
+//     background-color: #FEFAF2;
+//     color: $main-color;
+// }
 
-.header-container {
-  margin: 0 73px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+// .header-container {
+//   margin: 0 73px;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
 
-  .app-title {
-    -webkit-text-stroke-width: 3px;
-    -webkit-text-stroke-color: $main-color;
-    text-align: left;
-    font-family: 'Yusei Magic', sans-serif;
-    font-size: 40px;
-    padding-left: 54px;
-    color: $main-color;
-    text-decoration: none;
-  }
+//   .app-title {
+//     -webkit-text-stroke-width: 3px;
+//     -webkit-text-stroke-color: $main-color;
+//     text-align: left;
+//     font-family: 'Yusei Magic', sans-serif;
+//     font-size: 40px;
+//     padding-left: 54px;
+//     color: $main-color;
+//     text-decoration: none;
+//   }
 
-  .menu-group {
-    font-size: 16px;
-    font-weight: bold;
-    display: flex;
-    align-items: center; 
-    text-align: right;
+//   .menu-group {
+//     font-size: 16px;
+//     font-weight: bold;
+//     display: flex;
+//     align-items: center; 
+//     text-align: right;
     
-    .menu-item {
-      display: inline-block;
-      margin-right: 54px;
-      font-family: 'Inter', sans-serif;
+//     .menu-item {
+//       display: inline-block;
+//       margin-right: 54px;
+//       font-family: 'Inter', sans-serif;
   
-      a {
-        color: $main-color;
-        text-decoration: none;
-      }
+//       a {
+//         color: $main-color;
+//         text-decoration: none;
+//       }
     
-      a.button {
-        color: white;
-        border-radius: 10px;
-        display: block;
-        width: 126px;
-        padding: 14px;
-        box-sizing: border-box;
-        background: $main-color;
-        text-align: center;
-      }
-    }
-  }
+//       a.button {
+//         color: white;
+//         border-radius: 10px;
+//         display: block;
+//         width: 126px;
+//         padding: 14px;
+//         box-sizing: border-box;
+//         background: $main-color;
+//         text-align: center;
+//       }
+//     }
+//   }
+// }
+
+.navbar {
+    font-family: 'Yusei Magic', sans-serif;
 }
 
 .top-content {
+  color: $main-color;
   margin: 50px 470px 0;
   display: flex;
   flex-direction: column;
@@ -101,19 +110,20 @@ body {
   }
   
   a.button {
-    margin-top: 50px;
-    color: white;
-    font-size: 30px;
+    margin-top: 60px;
+    // font-family: 'Yusei Magic', sans-serif;
+    // color: white;
+    // font-size: 30px;
     font-weight: 600;
-    font-family: 'Inter', sans-serif;
-    vertical-align: middle;
-    text-decoration: none;
-    border-radius: 10px;
-    width: 297px;
-    height: 55px;
-    padding: 8px 70px;
-    box-sizing: border-box;
-    background: $main-color;
-    text-align: center;
+    // font-family: 'Inter', sans-serif;
+    // vertical-align: middle;
+    // text-decoration: none;
+    // border-radius: 10px;
+    // width: 297px;
+    // height: 55px;
+    // padding: 8px 70px;
+    // box-sizing: border-box;
+    // background: $main-color;
+    // text-align: center;
   }
 }
