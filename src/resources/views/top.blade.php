@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-theme="autmn" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         @vite(['resources/sass/top.scss'])
         <meta charset="utf-8">
@@ -38,7 +38,7 @@
                 <img src="{{ asset("images/recipon.png") }}" class="app-icon-img1">
             </div>
             <a href="login" class="button">
-                <button class="btn btn-wide btn-neutral text-lg">使ってみる</button>
+                <button class="btn btn-wide btn-neutral text-lg text-white">使ってみる</button>
             </a>
         </div>
     </body>
