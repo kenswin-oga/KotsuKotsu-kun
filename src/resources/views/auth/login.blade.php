@@ -14,12 +14,12 @@
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
                 </div>
                 <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow rounded-box w-32">
-                  <li><a>mypage</a></li>
-                  <li><a>register</a></li>
+                  <li><a href="/login">mypage</a></li>
+                  <li><a href="/register">register</a></li>
                 </ul>
             </div>
             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chef-hat" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 3c1.918 0 3.52 1.35 3.91 3.151a4 4 0 0 1 2.09 7.723l0 7.126h-12v-7.126a4 4 0 1 1 2.092 -7.723a4 4 0 0 1 3.908 -3.151z" /><path d="M6.161 17.009l11.839 -.009" /></svg>
-            <a class="btn btn-ghost text-xl">レシぽん！</a>
+            <a href="/" class="btn btn-ghost text-xl">レシぽん！</a>
         </div>
         <div class="navbar-center">
         </div>
@@ -31,7 +31,7 @@
             ログイン
         </div>
         <form method="POST" action="{{ route('login') }}" class="login-form">
-            @csrf
+        @csrf
             <div class="form-group">
                 <label for="name" class="input input-bordered flex items-center gap-2">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4 opacity-70"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM12.735 14c.618 0 1.093-.561.872-1.139a6.002 6.002 0 0 0-11.215 0c-.22.578.254 1.139.872 1.139h9.47Z" /></svg>
