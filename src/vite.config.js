@@ -11,7 +11,7 @@ export default defineConfig({
                 // 'resources/sass/signup.scss',
                 'resources/sass/app.scss',
                 'resources/sass/home.scss',
-                'resources/js/app.js',
+                'resources/ts/app.ts',
             ],
             refresh: true,
         }),
