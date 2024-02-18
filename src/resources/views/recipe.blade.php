@@ -59,27 +59,27 @@
                         <div class="bg-base-100">
                             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
                                 <div class="card card-compact bg-base-100 shadow-xl">
-                                    <figure><img src="{{ $recipeDataArray[0]['result'][0]['foodImageUrl'] }}" alt="Recipe 1" class="w-full h-54 object-cover" width="200" height="200" style="aspect-ratio: 200 / 200; object-fit: cover;" /></figure>
+                                    <figure><img src="{{ $recipeList['result'][0]['foodImageUrl'] }}" alt="Recipe 1" class="w-full h-54 object-cover" width="200" height="200" style="aspect-ratio: 200 / 200; object-fit: cover;" /></figure>
                                     <div class="card-body">
-                                    <h2 class="card-title">{{ $recipeDataArray[0]['result'][0]['recipeTitle'] }}</h2>
-                                    <p class="text-gray-600">{{ $recipeDataArray[0]['result'][0]['recipeDescription'] }}</p>
+                                    <h2 class="card-title">{{ $recipeList['result'][0]['recipeTitle'] }}</h2>
+                                    <p class="text-gray-600">{{ $recipeList['result'][0]['recipeDescription'] }}</p>
                                     <div class="card-actions justify-end">
                                         {{-- <a class="text-neutral font-bold" href="{{ route('recipe-list', ['id' => 0]) }}">レシピをみる</a> --}}
                                         <button class="btn btn-primary min-h-0 h-8">
-                                            <a href="{{ $recipeDataArray[0]['result'][0]['recipeUrl'] }}">レシピ</a>
+                                            <a href="{{ route('recipe-list', ['id' => 0]) }}">レシピ</a>
                                         </button>
                                     </div>
                                     </div>
                                 </div>
-                                <div class="card card-compact bg-base-100 shadow-xl">
+                                {{--<div class="card card-compact bg-base-100 shadow-xl">
                                     <figure><img src="{{ $recipeDataArray[1]['result'][0]['foodImageUrl'] }}" alt="Recipe 1" class="w-full h-54 object-cover" width="200" height="200" style="aspect-ratio: 200 / 200; object-fit: cover;" /></figure>
                                     <div class="card-body">
                                         <h2 class="card-title">{{ $recipeDataArray[1]['result'][0]['recipeTitle'] }}</h2>
                                         <p class="text-gray-600">{{ $recipeDataArray[1]['result'][0]['recipeDescription'] }}</p>
                                         <div class="card-actions justify-end">
-                                            {{-- <a class="text-neutral font-bold" href="{{ route('recipe-list', ['id' => 1]) }}">レシピをみる</a> --}}
+                                            {{-- <a class="text-neutral font-bold" href="{{ route('recipe-list', ['id' => 1]) }}">レシピをみる</a>
                                             <button class="btn btn-primary min-h-0 h-8">
-                                                <a href="{{ $recipeDataArray[1]['result'][0]['recipeUrl'] }}">レシピ</a>
+                                                <a href="{{ route('recipe-list', ['id' => 1]) }}">レシピ</a>
                                             </button>
                                         </div>
                                     </div>
@@ -90,17 +90,17 @@
                                         <h2 class="card-title">{{ $recipeDataArray[2]['result'][0]['recipeTitle'] }}</h2>
                                     <p class="text-gray-600">{{ $recipeDataArray[2]['result'][0]['recipeDescription'] }}</p>
                                     <div class="card-actions justify-end">
-                                        {{-- <a class="text-neutral font-bold" href="{{ route('recipe-list', ['id' => 1]) }}">レシピをみる</a> --}}
+                                        {{-- <a class="text-neutral font-bold" href="{{ route('recipe-list', ['id' => 1]) }}">レシピをみる</a>
                                         <button class="btn btn-primary min-h-0 h-8">
-                                            <a href="{{ $recipeDataArray[2]['result'][0]['recipeUrl'] }}">レシピ</a>
+                                            <a href="{{ route('recipe-list', ['id' => 2]) }}">レシピ</a>
                                         </button>
                                     </div>
                                     </div>
-                                </div>
+                                </div>--}}
                             </div>
                         </div>
                         <button class="btn btn-primary min-h-0 h-8 mt-5 font-normal">
-                            <a href="/home">ほかの料理をみる</a>
+                            <a href="{{ route('recipe-list', ['id' => 0]) }}">ほかの料理をみる</a>
                         </button>
                         {{-- <script>
                             function reloadPage() {
@@ -111,17 +111,17 @@
                 </div>
                 <!-- 右側のブロック -->
                 
-                <div class="p-6 w-1/3">
+                {{--<div class="p-6 w-1/3">
                     <div class="mb-6">
                         <h2 class="text-xl font-bold mb-4">「人気メニュー」のおすすめ</h2>
                         <div class="card card-side bg-base-100 shadow-xl">
                             <figure style="max-width: 180px;"><img src="{{ $recipeDataArray[5]['result'][0]['foodImageUrl'] }}" alt="Recipe 1" class="w-full h-54 object-cover" width="200" height="200" style="aspect-ratio: 200 / 200; object-fit: cover;" /></figure>
                             <div class="card-body">
                                 <h2 class="card-title">{{ $recipeDataArray[5]['result'][0]['recipeTitle'] }}</h2>
-                                {{-- <p class="text-gray-600">{{ $recipeDataArray[3]['result'][0]['recipeDescription'] }}</p> --}}
+                                {{-- <p class="text-gray-600">{{ $recipeDataArray[3]['result'][0]['recipeDescription'] }}</p> 
                               <div class="card-actions justify-center">
                                 <button class="btn btn-primary min-h-0 h-8 mt-5 font-normal">
-                                    <a href="{{ $recipeDataArray[5]['result'][0]['recipeUrl'] }}">レシピ</a>
+                                    <a href="{{ route('recipe-list', ['id' => 5]) }}">レシピ</a>
                                 </button>
                               </div>
                             </div>
@@ -133,10 +133,10 @@
                             <figure style="max-width: 180px;"><img src="{{ $recipeDataArray[3]['result'][0]['foodImageUrl'] }}" alt="Recipe 1" class="w-full h-54 object-cover" width="200" height="200" style="aspect-ratio: 200 / 200; object-fit: cover;" /></figure>
                             <div class="card-body">
                                 <h2 class="card-title">{{ $recipeDataArray[3]['result'][0]['recipeTitle'] }}</h2>
-                                {{-- <p class="text-gray-600">{{ $recipeDataArray[3]['result'][0]['recipeDescription'] }}</p> --}}
+                                {{-- <p class="text-gray-600">{{ $recipeDataArray[3]['result'][0]['recipeDescription'] }}</p> 
                               <div class="card-actions justify-center">
                                 <button class="btn btn-primary min-h-0 h-8 mt-5 font-normal">
-                                    <a href="{{ $recipeDataArray[3]['result'][0]['recipeUrl'] }}">レシピ</a>
+                                    <a href="{{ route('recipe-list', ['id' => 3]) }}">レシピ</a>
                                 </button>
                               </div>
                             </div>
@@ -148,15 +148,15 @@
                             <figure style="max-width: 180px;"><img src="{{ $recipeDataArray[4]['result'][0]['foodImageUrl'] }}" alt="Recipe 1" class="w-full h-54 object-cover" width="200" height="200" style="aspect-ratio: 200 / 200; object-fit: cover;" /></figure>
                             <div class="card-body">
                                 <h2 class="card-title">{{ $recipeDataArray[4]['result'][0]['recipeTitle'] }}</h2>
-                                {{-- <p class="text-gray-600">{{ $recipeDataArray[3]['result'][0]['recipeDescription'] }}</p> --}}
+                                {{-- <p class="text-gray-600">{{ $recipeDataArray[3]['result'][0]['recipeDescription'] }}</p> 
                                 <div class="card-actions justify-center">
                                 <button class="btn btn-primary min-h-0 h-8 mt-5 font-normal">
-                                    <a href="{{ $recipeDataArray[4]['result'][0]['recipeUrl'] }}">レシピ</a>
+                                    <a href="{{ route('recipe-list', ['id' => 4]) }}">レシピ</a>
                                 </button>
                               </div>
                             </div>
-                        </div>
-                    </div>
+                          </div>
+                    </div>--}}
                 </div>
             </div>
         </div>

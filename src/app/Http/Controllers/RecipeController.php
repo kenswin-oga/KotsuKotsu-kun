@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-class RecipeListController extends Controller
+class RecipeController extends Controller
 {
     public function index($id)
     {
@@ -10,6 +10,6 @@ class RecipeListController extends Controller
         // dd($recipeDataArray);
         $recipeList = $recipeDataArray[0][$id];
         // dd($recipeList, $recipeDataArray);
-        return view('recipe_list', compact('recipeList'));
+        return view('recipe', compact('recipeList'));
     }
 }

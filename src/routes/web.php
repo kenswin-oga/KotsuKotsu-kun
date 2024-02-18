@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\RecipeListController;
+use App\Http\Controllers\RecipeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,4 +24,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/register', function () {
     return view('auth.register');
 })->name('register');
-Route::get('/recipe-list/{id}', [RecipeListController::class, 'index'])->name('recipe-list');
+Route::get('/recipe/{id}', [RecipeController::class, 'index'])->name('recipe-list');
