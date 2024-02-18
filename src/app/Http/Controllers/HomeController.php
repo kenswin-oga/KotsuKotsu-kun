@@ -29,8 +29,8 @@ class HomeController extends Controller
         $recipeDataArray = [];
         $categoryNames = [];
 
-        // レシピデータを3つ取得
-        for ($i = 0; $i < 3; $i++) {
+        // レシピデータを4つ取得
+        for ($i = 0; $i < 6; $i++) {
             $category = $this->getRandomCategory();
             $recipeDataArray[] = $this->getRecipeDataByCategory($category);
             $categoryNames[] = $category->categoryName;
