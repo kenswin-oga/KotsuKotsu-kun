@@ -13,6 +13,22 @@ services:
       - "8080:80"
     volumes:
       - "./src:/var/www/html"
+
+  ngrok:
+    image: ngrok/ngrok:latest
+    restart: unless-stopped
+    environment:
+      NGROK_AUTHTOKEN: "2cbobgX8pZzqAIlLwDNwZXz3uhj_76vHXxGJmDhEgCEznoR93"
+    command:
+      - "start"
+      - "--all"
+      - "--config"
+      - "/etc/ngrok.yml"
+    volumes:
+      - ./ngrok.yml:/etc/ngrok.yml
+    ports:
+      - 4040:4040
+
   # PHPコンテナ
   php:
     container_name: "php"

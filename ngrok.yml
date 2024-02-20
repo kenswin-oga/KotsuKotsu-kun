@@ -1,0 +1,6 @@
+version: "2"
+tunnels:
+  website:
+    proto: http
+    addr: web:80
+    host_header: rewrite

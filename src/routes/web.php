@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RecipeController;
+use App\Http\Controllers\LineBotController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,3 +26,5 @@ Route::get('/register', function () {
     return view('auth.register');
 })->name('register');
 Route::get('/recipe/{id}', [RecipeController::class, 'index'])->name('recipe-list');
+
+Route::post('webhook/linebot', [LineBotController::class, 'reply']);
