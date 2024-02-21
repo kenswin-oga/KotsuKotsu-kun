@@ -1,5 +1,5 @@
 <script setup>
-const testmsg='This is List.';
+const testmsg='';
 </script>
 
 <template>

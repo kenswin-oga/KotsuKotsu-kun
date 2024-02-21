@@ -28,3 +28,4 @@ Route::get('/register', function () {
 Route::get('/recipe/{id}', [RecipeController::class, 'index'])->name('recipe-list');
 
 Route::post('webhook/linebot', [LineBotController::class, 'reply']);
+Route::get('/linebot/send', [LineBotController::class, 'sendBroadcastMessage']);
