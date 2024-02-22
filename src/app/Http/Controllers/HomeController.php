@@ -42,6 +42,14 @@ class HomeController extends Controller
         return view('home', ['recipeDataArray' => $recipeDataArray, 'categoryNames' => $categoryNames]);
     }
 
+    public function getRecipeData()
+    {
+        $category = $this->getRandomCategory();
+        $recipeDataArray[] = $this->getRecipeDataByCategory($category);
+
+        return $recipeDataArray;
+    }
+
     private function getRandomCategory()
     {
         $todayMenuList[] = [30, 31, 32, 33, 14, 15, 16];
