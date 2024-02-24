@@ -131,9 +131,9 @@ $main-color: #4F3318;
 
 // スマホデザイン
 @media (max-width: 768px) {
-  .navbar-start {
-    width:60%;
-  }
+  // .navbar-start {
+  //   width:60%;
+  // }
 
   .top-content {
     color: $main-color;
