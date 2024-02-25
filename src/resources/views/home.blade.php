@@ -55,8 +55,8 @@
         </div> --}}
         
         <div class="">
-            <div class="flex mx-20 my-10">
-                <div class="mx-auto px-10 w-2/3">
+            <div class="md:flex md:mx-20 mt-10 md:mb-10">
+                <div class="mx-auto px-10 md:w-2/3">
                     <div class="">
                         <div class="divider" style="border-color: red;"></div> 
                         <div class="flex flex-col items-center justify-center">
@@ -67,7 +67,7 @@
                         <div class="bg-base-100">
                             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
                                 <div class="card card-compact bg-base-100 shadow-xl">
-                                    <figure><img src="{{ $recipeDataArray[0]['result'][0]['foodImageUrl'] }}" alt="Recipe 1" class="w-full h-54 object-cover" width="200" height="200" style="aspect-ratio: 200 / 200; object-fit: cover;" /></figure>
+                                    <figure><img src="{{ $recipeDataArray[0]['result'][0]['foodImageUrl'] }}" alt="Recipe 1" class="w-full h-54 object-cover recipe-img-main" width="200" height="200" style="aspect-ratio: 200 / 200; object-fit: cover;" /></figure>
                                     <div class="card-body">
                                     <h2 class="card-title">{{ $recipeDataArray[0]['result'][0]['recipeTitle'] }}</h2>
                                     <p class="text-gray-600">{{ $recipeDataArray[0]['result'][0]['recipeDescription'] }}</p>
@@ -80,7 +80,7 @@
                                     </div>
                                 </div>
                                 <div class="card card-compact bg-base-100 shadow-xl">
-                                    <figure><img src="{{ $recipeDataArray[1]['result'][0]['foodImageUrl'] }}" alt="Recipe 1" class="w-full h-54 object-cover" width="200" height="200" style="aspect-ratio: 200 / 200; object-fit: cover;" /></figure>
+                                    <figure><img src="{{ $recipeDataArray[1]['result'][0]['foodImageUrl'] }}" alt="Recipe 1" class="w-full h-54 object-cover recipe-img-main" width="200" height="200" style="aspect-ratio: 200 / 200; object-fit: cover;" /></figure>
                                     <div class="card-body">
                                         <h2 class="card-title">{{ $recipeDataArray[1]['result'][0]['recipeTitle'] }}</h2>
                                         <p class="text-gray-600">{{ $recipeDataArray[1]['result'][0]['recipeDescription'] }}</p>
@@ -93,7 +93,7 @@
                                     </div>
                                 </div>
                                 <div class="card card-compact bg-base-100 shadow-xl">
-                                    <figure><img src="{{ $recipeDataArray[2]['result'][0]['foodImageUrl'] }}" alt="Recipe 1" class="w-full h-54 object-cover" width="200" height="200" style="aspect-ratio: 200 / 200; object-fit: cover;" /></figure>
+                                    <figure><img src="{{ $recipeDataArray[2]['result'][0]['foodImageUrl'] }}" alt="Recipe 1" class="w-full h-54 object-cover recipe-img-main" width="200" height="200" style="aspect-ratio: 200 / 200; object-fit: cover;" /></figure>
                                     <div class="card-body">
                                         <h2 class="card-title">{{ $recipeDataArray[2]['result'][0]['recipeTitle'] }}</h2>
                                     <p class="text-gray-600">{{ $recipeDataArray[2]['result'][0]['recipeDescription'] }}</p>
@@ -108,7 +108,7 @@
                             </div>
                         </div>
                         <button class="btn btn-primary min-h-0 h-8 mt-5 font-normal">
-                            <a href="/home">ほかの料理をみる</a>
+                            <a href="/home">その他のおすすめ</a>
                         </button>
                         {{-- <script>
                             function reloadPage() {
@@ -119,11 +119,11 @@
                 </div>
                 <!-- 右側のブロック -->
                 
-                <div class="p-6 w-1/3">
+                <div class="p-6 mt-10 md:mt-0 md:w-1/3">
                     <div class="mb-6">
                         <h2 class="text-xl font-bold mb-4">「人気メニュー」のおすすめ</h2>
                         <div class="card card-side bg-base-100 shadow-xl">
-                            <figure style="max-width: 180px;"><img src="{{ $recipeDataArray[5]['result'][0]['foodImageUrl'] }}" alt="Recipe 1" class="w-full h-54 object-cover" width="200" height="200" style="aspect-ratio: 200 / 200; object-fit: cover;" /></figure>
+                            <figure style="max-width: 180px;"><img src="{{ $recipeDataArray[5]['result'][0]['foodImageUrl'] }}" alt="Recipe 1" class="w-full h-54 object-cover recipe-img-sub" width="200" height="200" style="aspect-ratio: 200 / 200; object-fit: cover;" /></figure>
                             <div class="card-body">
                                 <h2 class="card-title">{{ $recipeDataArray[5]['result'][0]['recipeTitle'] }}</h2>
                                 {{-- <p class="text-gray-600">{{ $recipeDataArray[3]['result'][0]['recipeDescription'] }}</p> --}}
@@ -138,7 +138,7 @@
                     <div class="mb-6">
                         <h2 class="text-xl font-bold mb-4">「簡単料理・時短」のおすすめ</h2>
                         <div class="card card-side bg-base-100 shadow-xl">
-                            <figure style="max-width: 180px;"><img src="{{ $recipeDataArray[3]['result'][0]['foodImageUrl'] }}" alt="Recipe 1" class="w-full h-54 object-cover" width="200" height="200" style="aspect-ratio: 200 / 200; object-fit: cover;" /></figure>
+                            <figure style="max-width: 180px;"><img src="{{ $recipeDataArray[3]['result'][0]['foodImageUrl'] }}" alt="Recipe 1" class="w-full h-54 object-cover recipe-img-sub" width="200" height="200" style="aspect-ratio: 200 / 200; object-fit: cover;" /></figure>
                             <div class="card-body">
                                 <h2 class="card-title">{{ $recipeDataArray[3]['result'][0]['recipeTitle'] }}</h2>
                                 {{-- <p class="text-gray-600">{{ $recipeDataArray[3]['result'][0]['recipeDescription'] }}</p> --}}
@@ -153,7 +153,7 @@
                     <div class="mb-6">
                         <h2 class="text-xl font-bold mb-4">「節約料理」のおすすめ</h2>
                         <div class="card card-side bg-base-100 shadow-xl">
-                            <figure style="max-width: 180px;"><img src="{{ $recipeDataArray[4]['result'][0]['foodImageUrl'] }}" alt="Recipe 1" class="w-full h-54 object-cover" width="200" height="200" style="aspect-ratio: 200 / 200; object-fit: cover;" /></figure>
+                            <figure style="max-width: 180px;"><img src="{{ $recipeDataArray[4]['result'][0]['foodImageUrl'] }}" alt="Recipe 1" class="w-full h-54 object-cover recipe-img-sub" width="200" height="200" style="aspect-ratio: 200 / 200; object-fit: cover;" /></figure>
                             <div class="card-body">
                                 <h2 class="card-title">{{ $recipeDataArray[4]['result'][0]['recipeTitle'] }}</h2>
                                 {{-- <p class="text-gray-600">{{ $recipeDataArray[3]['result'][0]['recipeDescription'] }}</p> --}}

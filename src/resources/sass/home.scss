@@ -17,6 +17,12 @@ $main-color: #4F3318;
 //     background-color: #FEFAF2;
 //     color: $main-color;
 // }
+.recipe-img-main {
+  height: revert-layer;
+}
+.recipe-img-sub {
+  height: -webkit-fill-available;
+}
 
 .header-container {
   margin: 0 73px;
@@ -68,4 +74,10 @@ $main-color: #4F3318;
 
 .custom-brown-bg {
   background-color: #4F3318; /* カスタムの茶色に変更 */
+}
+
+@media only screen and (max-width: 768px) {
+  .alert {
+    display: block !important; /* スマートフォンの場合に display:block; を強制的に適用 */
+  }
 }
