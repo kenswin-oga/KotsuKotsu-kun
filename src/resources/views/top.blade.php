@@ -40,7 +40,7 @@
                 <img src="{{ asset("images/recipon.png") }}" class="app-icon-img1">
             </div>
             <a href="login" class="button">
-                <button class="btn btn-wide btn-neutral text-lg text-white">使ってみる</button>
+                <button class="btn btn-wide btn-neutral text-lg text-white">料理のレシピをみる</button>
             </a>
         </div>
     </body>
