@@ -1,5 +1,5 @@
 # docker-composeのバージョン
-version: "3" 
+version: "2"
 
 # コンテナの定義
 services: 
@@ -8,11 +8,14 @@ services:
     # コンテナ名
     container_name: "web"
     build:
+      context: "./"
       dockerfile: "./web/Dockerfile"
     ports:
       - "8080:80"
     volumes:
       - "./src:/var/www/html"
+    depends_on:
+      - php
 
   ngrok:
     image: ngrok/ngrok:latest
@@ -33,6 +36,7 @@ services:
   php:
     container_name: "php"
     build:
+      context: "./"
       dockerfile: "./php/Dockerfile"
     volumes:
       - "./src:/var/www/html"
@@ -40,6 +44,7 @@ services:
   db:
     container_name: "db"
     build:
+      context: "./"
       dockerfile: "./db/Dockerfile"
     ports:
       - "3306:3306"
@@ -54,6 +59,7 @@ services:
   # phpmyadmin
   phpmyadmin:
     build:
+      context: "./"
       dockerfile: "./phpmyadmin/Dockerfile"
     container_name: "phpmyadmin"
     environment:
