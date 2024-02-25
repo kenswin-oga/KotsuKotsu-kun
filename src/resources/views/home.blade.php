@@ -61,7 +61,7 @@
                         <div class="divider" style="border-color: red;"></div> 
                         <div class="flex flex-col items-center justify-center">
                             <h1 class="text-3xl font-bold mb-4">本日のおすすめ料理</h1>
-                            <p class="text-gray-600 text-center">好きな料理を選んでレシピを見てみよう！</p>
+                            <p class="text-gray-600 text-center">厳選レシピを3つ紹介！</p>
                         </div>
                         <div class="divider"></div> 
                         <div class="bg-base-100">

@@ -26,7 +26,7 @@
         <div class="navbar-end">
         </div>
     </div>
-    <div class="top-content mt-44 md:mt-32">
+    <div class="top-content mt-32">
         <div class="sub-title">
             ログイン
         </div>
