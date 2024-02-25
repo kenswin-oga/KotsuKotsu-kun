@@ -4,7 +4,7 @@
     @vite(['resources/sass/signin.scss'])
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Laravel</title>
+    <title>レシピ提案サービス -レシぽん！-</title>
 </head>
 <body class="page">
     <div class="navbar">
