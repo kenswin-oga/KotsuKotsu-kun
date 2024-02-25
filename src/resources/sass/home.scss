@@ -20,8 +20,13 @@ $main-color: #4F3318;
 .recipe-img-main {
   height: revert-layer;
 }
+
 .recipe-img-sub {
   height: -webkit-fill-available;
+}
+
+.navbar-start {
+  font-family: 'Yusei Magic', sans-serif;
 }
 
 .header-container {

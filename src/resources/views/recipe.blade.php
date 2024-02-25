@@ -13,8 +13,8 @@
     </head>
     <body class="page">
         <div class="navbar">
-            <div class="navbar-start w-3/5 md:w-1/2">
-                <div class="dropdown mr-5">
+            <div class="navbar-start w-full md:w-1/2">
+                <div class="dropdown mr-4">
                     <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
                       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
                     </div>
@@ -24,7 +24,7 @@
                     </ul>
                 </div>
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chef-hat" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 3c1.918 0 3.52 1.35 3.91 3.151a4 4 0 0 1 2.09 7.723l0 7.126h-12v-7.126a4 4 0 1 1 2.092 -7.723a4 4 0 0 1 3.908 -3.151z" /><path d="M6.161 17.009l11.839 -.009" /></svg>
-                <a href="/" class="btn btn-ghost text-xl">レシぽん！</a>
+                <a href="/" class="pr-2 btn btn-ghost text-xl">レシぽん！</a>
             </div>
             <div class="navbar-center">
             </div>
